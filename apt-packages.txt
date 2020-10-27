@@ -3,9 +3,11 @@ curl
 enum4linux
 gnome-screenshot
 gobuster
+hashcat-utils
 hcxdumptool
 hcxtools
 htop
+maskprocessor
 nbtscan
 nikto
 nishang
@@ -13,6 +15,7 @@ nmap
 onesixtyone
 oscanner
 powershell-empire
+princeprocessor
 python3
 python3-pip
 realtek-rtl88xxau-dkms
