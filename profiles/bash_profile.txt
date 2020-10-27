@@ -1,0 +1,5 @@
+export PATH=$HOME/bin:/usr/sbin:/usr/share/metasploit-framework/tools/exploit:$PATH
+
+export IP=$(ifconfig eth0 | grep inet | awk '{print $2}' | head -n1)
+
+export HISTSIZE=50000

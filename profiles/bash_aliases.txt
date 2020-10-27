@@ -1,0 +1,11 @@
+if [ -f ~/.bash_profile ]; then
+  . ~/.bash_profile
+fi
+
+alias grep='grep --color'
+
+alias pyhttp='python -m SimpleHTTPServer 8000'
+
+alias mount-vm='sudo vmhgfs-fuse .host: /mnt -o allow_other'
+
+alias vpn='cd ~/vpn && sudo openvpn *.ovpn'

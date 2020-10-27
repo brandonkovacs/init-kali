@@ -1,0 +1,2 @@
+set-option -g default-command bash
+set-option -g history-limit 50000
