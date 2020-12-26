@@ -13,7 +13,7 @@ export REPO_DIR="/opt"
 KALI_USER=$(ls /home/ | head -n1)
 KALI_USER_HOME="/home/$KALI_USER"
 KALI_SHARE=$(vmware-hgfsclient | head -n1)
-KALI_SHARE_MNT="/mnt/$KALI_SHARE"
+KALI_SHARE_MNT="/mnt/hgfs/$KALI_SHARE"
 INIT_KALI_DIR=$(dirname $(readlink -f $0))
 
 # Copy bash profile and tmux preferences
