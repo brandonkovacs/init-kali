@@ -4,7 +4,7 @@
 if [[ $(id -u) -ne 0 ]] ; then echo "Please run as root" ; exit 1 ; fi
 
 # Home folders to create and symlink within shared vmware folder
-HOME_FOLDERS=("bin" "src" "vpn")
+HOME_FOLDERS=("bin" "src" "vpn" "workspace")
 
 # Directory to install git repos (Customize as needed)
 export REPO_DIR="/opt"
