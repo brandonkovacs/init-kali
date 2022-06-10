@@ -80,3 +80,6 @@ done
 
 # Fix ownership of bash profile, etc for KALI_USER
 chown -R "$KALI_USER:$KALI_USER" "$KALI_USER_HOME"
+
+# Done
+echo "Finished initializing Kali virtual machine."

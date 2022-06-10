@@ -3,6 +3,7 @@
 # Only run as root
 if [[ $(id -u) -ne 0 ]] ; then echo "Please run as root" ; exit 1 ; fi
 
+# Ensure parallels kali shared folder was passed in
 if [ "$#" -ne 1 ]; then
     echo "Usage: $0 <KALI_SHARED_FOLDER>" >&2
     exit 2
@@ -24,7 +25,6 @@ INIT_KALI_DIR=$(dirname $(readlink -f $0))
 cat "$INIT_KALI_DIR/profiles/bash_profile.txt" > "/home/$KALI_USER/.bash_profile"
 cat "$INIT_KALI_DIR/profiles/bash_aliases.txt" > "/home/$KALI_USER/.bash_aliases"
 cat "$INIT_KALI_DIR/profiles/tmux.conf.txt" > "/home/$KALI_USER/.tmux.conf"
-
 
 # Regenerate SSH Keys
 rm -rf /etc/ssh/ssh_host_*
@@ -80,3 +80,6 @@ done
 
 # Fix ownership of bash profile, etc for KALI_USER
 chown -R "$KALI_USER:$KALI_USER" "$KALI_USER_HOME"
+
+# Done
+echo "Finished initializing Kali virtual machine."
