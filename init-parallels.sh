@@ -47,7 +47,7 @@ done
 
 # Update system
 echo "Updating system..."
-apt -y clean all && apt -y update && apt -y upgrade && apt -y autoremove
+apt -y clean all && apt -y update && apt -y full-upgrade && apt -y autoremove
 
 # Install apt packages
 echo "Installing apt packages..."
