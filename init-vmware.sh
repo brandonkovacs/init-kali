@@ -6,15 +6,15 @@ if [[ $(id -u) -ne 0 ]] ; then echo "Please run as root" ; exit 1 ; fi
 # Home folders to create and symlink within shared vmware folder
 HOME_FOLDERS=("bin" "src" "vpn" "workspace")
 
-# Directory to install git repos (Customize as needed)
-export REPO_DIR="/opt"
-
 # Get Kali user and Kali Vmware Shared Directory
 KALI_USER=$(ls /home/ | head -n1)
 KALI_USER_HOME="/home/$KALI_USER"
 KALI_SHARE=$(vmware-hgfsclient | head -n1)
 KALI_SHARE_MNT="/mnt/hgfs/$KALI_SHARE"
 INIT_KALI_DIR=$(dirname $(readlink -f $0))
+
+# Directory to install git repos (Customize as needed)
+export REPO_DIR="$KALI_USER_HOME/src"
 
 # Copy bash profile and tmux preferences
 cat "$INIT_KALI_DIR/profiles/bash_profile.txt" > "/home/$KALI_USER/.bash_profile"
