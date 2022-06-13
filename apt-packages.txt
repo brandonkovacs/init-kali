@@ -1,6 +1,7 @@
 bloodhound
 curl
 enum4linux
+feroxbuster
 gnome-screenshot
 gobuster
 hashcat-utils
@@ -19,6 +20,7 @@ princeprocessor
 python3
 python3-pip
 realtek-rtl88xxau-dkms
+redis-tools
 seclists
 sipvicious
 smbclient
