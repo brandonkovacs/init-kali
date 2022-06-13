@@ -19,6 +19,11 @@ export REPO_DIR="$KALI_USER_HOME/src"
 # Copy bash profile and tmux preferences
 cat "$INIT_KALI_DIR/profiles/bash_profile.txt" > "/home/$KALI_USER/.bash_profile"
 cat "$INIT_KALI_DIR/profiles/bash_aliases.txt" > "/home/$KALI_USER/.bash_aliases"
+
+# Zsh - default in Kali 2022
+echo ". /home/$KALI_USER/.bash_profile" >> "/home/$KALI_USER/.zshrc"
+echo ". /home/$KALI_USER/.bash_aliases" >> "/home/$KALI_USER/.zshrc"
+
 cat "$INIT_KALI_DIR/profiles/tmux.conf.txt" > "/home/$KALI_USER/.tmux.conf"
 
 # Mount Kali Shared Directory
